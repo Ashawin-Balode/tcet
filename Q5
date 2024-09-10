@@ -1,0 +1,24 @@
+import java.util.Arrays;
+ public class MoveZeroEnd{
+    public static void main(String[] args){
+        int[] crates={1,0,2,0,4,3,0,5};
+
+        moveZeros(crates);
+        System.out.println(Arrays.toString(crates));
+    }
+
+    public static void moveZeros(int[] crates){
+        int pos = 0;
+        for (int i = 0; i<crates.length; i++){
+            if (crates[i] != 0) {
+                crates[pos] = crates[i];
+                pos++;
+        }
+    }
+    while(pos<crates.length){
+        crates[pos]=0;
+        pos++;
+    }
+
+ }
+}
