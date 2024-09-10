@@ -1,0 +1,13 @@
+@FunctionalInterface
+interface Sayable{
+    String say(String message);
+}
+public class LambdaExample{
+    public static void main(String[] args) {
+        Sayable sayable = (message)>{
+            return "Hello, " + message;
+        };
+        String greeting = sayable.say("John");
+        System.out.println(greeting);
+    }
+}
